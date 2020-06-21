@@ -16,16 +16,15 @@
         }
         for (var a = 0; a < SomeMassive.length; a++){
             SomeMassive[a] = [];
-                        if (a % 2 == 0){
-                            SomeMassive[a][0] = "even";
-                            SomeMassive[a][1] = "even";
-                            SomeMassive[a][2] = "even";
-                        }
-                        else{
-                            SomeMassive[a][0] = "odd";
-                            SomeMassive[a][1] = "odd";
-                            SomeMassive[a][2] = "odd";
-                        }
+            for (var i = 0; i <3; i++){
+            //     if (a % 2 == 0){
+            //         SomeMassive[a][i] = "even";
+            //     }
+            //     else{ 
+            //     SomeMassive[a][i] = "odd";
+            //     }
+            SomeMassive[a][i] = (a % 2 == 0) ? "even":"odd"; //то же самое, только используя тернарный оператор
+            }
         }
         console.log(SomeMassive);
     </script>
