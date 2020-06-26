@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+// 1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий, в каком квадранте в декартовой системе координат находится данная точка. Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+
+        var a = +prompt("Input x-coordinate, only number");
+        var b = +prompt("Input y-coordinate, only number");
+        if (isNaN(a) || isNaN(b)) {
+                alert("It's not a number!");
+            }
+
+        var Point = {   x : a, 
+                        y : b,
+                        
+                        GetQuadrant: function(a, b){
+
+                            if(Point.x >= 0 && Point.y >= 0){
+                                console.log("Your point located at the I quadrant of Decart system");
+                            }
+                            else if(Point.x <= 0 && Point.y >= 0){
+                                console.log("Your point located at the II quadrant of Decart system");
+
+                            }
+                            else if(Point.x <= 0 && Point.y <= 0 ){
+                                console.log("Your point located at the III quadrant of Decart system");
+                            }
+                            else if(Point.x >= 0 && Point.y <= 0){
+                                console.log("Your point located at the IV quadrant of Decart system");
+                            }
+
+                        }
+                    }
+                   Point.GetQuadrant(a, b);
+    </script>
+</head>
+<body>
+</body>
+</html>

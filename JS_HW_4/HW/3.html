@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+    // 3.  Создать игру "Камень-Ножницы-Бумага".
+    //     Выбор компьютера определяется строкой:  
+    //     "var computerChoice = Math.random();
+    //     alert(computerChoice);".
+    //     Math.random() выдает произвольное число в промежутке от 0 до 1, на основании этого можно построить принцип выбора решения компьютера.
+
+    var userChoice = prompt("Камень, ножницы или бумага?", "Камень Ножницы Бумага");
+    var computerChoice = Math.random();
+    // if (userChoice != "Камень" || "Ножницы" || "Бумага"){
+    //    alert("Ошибка, Вы ввели несуществующую опцию!");
+    //    userChoice = prompt("Камень, ножницы или бумага?", "Камень Ножницы Бумага");
+    // }
+    if (computerChoice < 0.33){
+        computerChoice = "Камень"
+    }
+    else if (computerChoice <= 0.66){
+        computerChoice = "Ножницы"
+    }
+    else {
+        computerChoice = "Бумага"
+    }
+
+    alert("Компьютер: " + computerChoice);
+
+    var choice1 = userChoice;
+    var choice2 = computerChoice;
+
+    var result = function(choice1, choice2){
+        if ( choice1 === choice2) {
+            return "Ничья!";
+        }
+        else if (choice1 === "Камень"){ 
+            if (choice2 === "Ножницы"){
+                return "Камень победил!";
+            }
+            else {
+                return "Бумага победила!";
+            }
+
+        }
+        else if (choice1 === "Бумага") {
+            if (choice2 === "Камень") {
+                return "Бумага победила!"
+            }
+            else{
+                return "Ножницы победили!";
+            }
+        }
+        else if (choice1 === "Ножницы") {
+            if (choice2 === "Бумага") {
+                return "Ножницы победили!"
+            }
+            else{
+                return "Камень победил!";
+            }
+        }
+    }
+
+    alert(result(choice1, choice2));
+    </script>
+</head>
+<body>
+</body>
+</html>

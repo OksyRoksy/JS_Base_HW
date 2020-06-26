@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+    //     1. Создать функцию calculate(operand1, operand2, sign), где operand1 и operand2 — два числа, sign — знак арифметической операции.
+    //    Функция должна расчитывать результат операции, исходя из переданного ей знака. 
+    //    Функция должна проверять корректность введенных чисел и знака операции.
+    //    Все аргументы для функции принять от пользователя.
+
+        var operand1 = +prompt("Введите первое число");
+        var operand2 = +prompt("Введите второе число");
+        if ( !parseInt(operand1) ) {
+        alert ('Нужно писать число!');
+        operand1 = +prompt("Введите первое число");
+        };
+        if ( !parseInt(operand2) ) {
+        alert ('Нужно писать число!');
+        operand2 = +prompt("Введите первое число");
+        };
+        var sign = prompt("Введите знак необходимой арифметической операции");
+        var result;
+
+        function add(a, b){
+            return a + b;
+        };
+        function min(a, b){
+            return a - b;
+        };
+        function mult(a, b){
+            return a * b;
+        };
+        function div(a, b){
+            return a / b;
+        };
+
+        switch(sign){
+            case "+": 
+                result = add(operand1, operand2);
+                break;
+            case "-": 
+                result = min(operand1, operand2);
+                break;
+            case "*": 
+                result = mult(operand1, operand2);
+                break;
+            case "/": 
+                result = div(operand1, operand2);
+                break;
+            default: alert(sign + " не знак арифметической операции!");
+        }
+
+                if (result != undefined) {
+            alert("Результат операции: " + result);
+                }
+
+    </script>
+</head>
+<body>
+</body>
+</html>

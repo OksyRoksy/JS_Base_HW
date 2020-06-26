@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+    //   3. Напишите функцию которая бы переворачивала предоставленную строку
+    //     Возможно, вам придется превратить строку в массив, прежде чем вы можете обратить его. 
+    //     Ваш результат должен быть строкой.
+    //     "something"
+
+        function GetReverse(str){
+            // var stringMassive = str.split("");                //long way (to understand)
+            // var reverseMassive = stringMassive.reverse();
+            // var result = reverseMassive.join("");
+            // return result;
+        return str.split("").reverse().join(""); // short way
+        }
+        var test = GetReverse("something");
+        console.log(test);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

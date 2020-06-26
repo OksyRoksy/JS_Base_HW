@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #block{
+            width: 200px;
+            height: 200px;
+            background: rgb(131, 37, 207);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            width
+            <input type="range" id="width" value="0" min="0" max="200" oninput="onRangeChange()">
+            <span id="ttw">0</span>
+        </p>
+        <p>
+           height
+            <input type="range" id="height" value="0" min="0" max="200" oninput="onRangeChange()">
+            <span id="tth">0</span>
+        </p>
+        <p>
+            color
+             <input type="color" id="color"  oninput="onRangeChange()">
+             <span id="ttc">0</span>
+        </p>
+                            
+    </div>
+
+    <div id="block"></div>
+
+    <script>
+        function onRangeChange(){
+            var width = document.getElementById('width').value;
+            var height = document.getElementById('height').value;
+            var color = document.getElementById('color').value;
+       
+            var ttw = document.getElementById('ttw');
+            var tth = document.getElementById('tth');
+            var ttc = document.getElementById('ttc');
+   
+            ttw.innerHTML = width;
+            tth.innerHTML = height;
+            ttc.innerHTML = color;
+    
+            var block = document.getElementById('block');
+
+            block.style.width = width + "px";
+            block.style.height = height + "px";
+            block.style.background = color;
+        }
+    </script>
+</body>
+</html>
