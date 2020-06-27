@@ -8,46 +8,45 @@
     //    После выполнения функции — вывести информацию о сотрудниках.
 
     var firm = [
-        firstPerson = {
-            name : a = prompt("Enter your Name"),
-            sName : b = prompt("Enter your sName"),
-            age : c = prompt("Enter your age"),
-            occupation : d = prompt("Enter your occupation"),
-             show : function(){
-                    console.log("First name: " + this.name);
-                    console.log("Surname: " + this.sName);
-                    console.log("Age: " + this.age + " years old");
-                    console.log("Occupation: " + this.occupation);
-             }
+            firstPerson = {
+                name : a = prompt("Enter your Name"),
+                sName : b = prompt("Enter your sName"),
+                age : c = prompt("Enter your age"),
+                occupation : d = prompt("Enter your occupation"),
+                // show : function(){
+                //         console.log("First name: " + this.name);
+                //         console.log("Surname: " + this.sName);
+                //         console.log("Age: " + this.age + " years old");
+                //         console.log("Occupation: " + this.occupation);
+                // }
+            },
+            secondPerson = {
+                name : a = prompt("Enter your Name"),
+                sName : b = prompt("Enter your sName"),
+                age : c = prompt("Enter your age"),
+                occupation : d = prompt("Enter your occupation"),
+                // show : function(){
+                //         console.log("First name: " + this.name);
+                //         console.log("Surname: " + this.sName);
+                //         console.log("Age: " + this.age + " years old");
+                //         console.log("Occupation: " + this.occupation);
+                // }
 
-        },
-        secondPerson = {
-            name : a = prompt("Enter your Name"),
-            sName : b = prompt("Enter your sName"),
-            age : c = prompt("Enter your age"),
-            occupation : d = prompt("Enter your occupation"),
-             show : function(){
-                    console.log("First name: " + this.name);
-                    console.log("Surname: " + this.sName);
-                    console.log("Age: " + this.age + " years old");
-                    console.log("Occupation: " + this.occupation);
-             }
+            },
+            thirdPerson = {
+                name : a = prompt("Enter your Name"),
+                sName : b = prompt("Enter your sName"),
+                age : c = prompt("Enter your age"),
+                occupation : d = prompt("Enter your occupation"),
+                // show : function(){
+                //         console.log("First name: " + this.name);
+                //         console.log("Surname: " + this.sName);
+                //         console.log("Age: " + this.age + " years old");
+                //         console.log("Occupation: " + this.occupation);
+                // }
 
-        },
-        thirdPerson = {
-            name : a = prompt("Enter your Name"),
-            sName : b = prompt("Enter your sName"),
-            age : c = prompt("Enter your age"),
-            occupation : d = prompt("Enter your occupation"),
-             show : function(){
-                    console.log("First name: " + this.name);
-                    console.log("Surname: " + this.sName);
-                    console.log("Age: " + this.age + " years old");
-                    console.log("Occupation: " + this.occupation);
-             }
-
-        }
-    ];
+            }
+        ];
     function AddSalary(arr) {
                 for (var i = 0; i < arr.length; i++) {
                     switch (arr[i].occupation) {
@@ -65,16 +64,18 @@
                     }
                 }
             }
-            
-            AddSalary(firm);
+            firm.show = function(){
+                    for (var i = 0; i < firm.length; i++) {
+                            console.log("First name: " + firm[i].name);
+                            console.log("Surname: " + firm[i].sName);
+                            console.log("Age: " + firm[i].age + " years old");
+                            console.log("Occupation: " + firm[i].occupation);
+                            console.log("Salary: " + firm[i].salary);
+                    }
+        }
 
-            for(var i = 0; i < firm.length; i++){
-                console.log("First name: " + firm[i].name);
-                console.log("Surname: " + firm[i].sName);
-                console.log("Age: " + firm[i].age + " years old");
-                console.log("Occupation: " + firm[i].occupation);
-                console.log("Salary: " + firm[i].salary);
-            }
+            AddSalary(firm);
+            firm.show();
 
 var sortMetod = prompt("Enter method, you want to sort (name, sName, age, salary): ");
     firm.sort(function (a, b) {

@@ -18,24 +18,24 @@
                 sName : b = prompt("Enter your sName"),
                 age : c = prompt("Enter your age"),
                 occupation : d = prompt("Enter your occupation"),
-                show : function(){
-                        console.log("First name: " + this.name);
-                        console.log("Surname: " + this.sName);
-                        console.log("Age: " + this.age + " years old");
-                        console.log("Occupation: " + this.occupation);
-                }
+                // show : function(){
+                //         console.log("First name: " + this.name);
+                //         console.log("Surname: " + this.sName);
+                //         console.log("Age: " + this.age + " years old");
+                //         console.log("Occupation: " + this.occupation);
+                // }
             },
             secondPerson = {
                 name : a = prompt("Enter your Name"),
                 sName : b = prompt("Enter your sName"),
                 age : c = prompt("Enter your age"),
                 occupation : d = prompt("Enter your occupation"),
-                show : function(){
-                        console.log("First name: " + this.name);
-                        console.log("Surname: " + this.sName);
-                        console.log("Age: " + this.age + " years old");
-                        console.log("Occupation: " + this.occupation);
-                }
+                // show : function(){
+                //         console.log("First name: " + this.name);
+                //         console.log("Surname: " + this.sName);
+                //         console.log("Age: " + this.age + " years old");
+                //         console.log("Occupation: " + this.occupation);
+                // }
 
             },
             thirdPerson = {
@@ -43,12 +43,12 @@
                 sName : b = prompt("Enter your sName"),
                 age : c = prompt("Enter your age"),
                 occupation : d = prompt("Enter your occupation"),
-                show : function(){
-                        console.log("First name: " + this.name);
-                        console.log("Surname: " + this.sName);
-                        console.log("Age: " + this.age + " years old");
-                        console.log("Occupation: " + this.occupation);
-                }
+                // show : function(){
+                //         console.log("First name: " + this.name);
+                //         console.log("Surname: " + this.sName);
+                //         console.log("Age: " + this.age + " years old");
+                //         console.log("Occupation: " + this.occupation);
+                // }
 
             }
         ];
@@ -69,16 +69,22 @@
                     }
                 }
             }
+            firm.show = function(){
+                    for (var i = 0; i < firm.length; i++) {
+                            console.log("First name: " + firm[i].name);
+                            console.log("Surname: " + firm[i].sName);
+                            console.log("Age: " + firm[i].age + " years old");
+                            console.log("Occupation: " + firm[i].occupation);
+                            console.log("Salary: " + firm[i].salary);
+                    }
+        }
+        
+        
             
             AddSalary(firm);
+            firm.show();
 
-            for(var i = 0; i < firm.length; i++){
-                console.log("First name: " + firm[i].name);
-                console.log("Surname: " + firm[i].sName);
-                console.log("Age: " + firm[i].age + " years old");
-                console.log("Occupation: " + firm[i].occupation);
-                console.log("Salary: " + firm[i].salary);
-            }
+
 
     </script>
 </head>

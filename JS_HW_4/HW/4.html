@@ -4,27 +4,46 @@
     <title></title>
     <script type="text/javascript">
     // 4. Напишите функцию, которая возвращает n-е число Фибоначчи. Для решения используйте цикл.
-    var cache = {};
+//     var cache = {};
 
-function fibonacci(number) {
+// function fibonacci(number) {
     
-    if (number < 1)
-        return 0;
+//     if (number < 1)
+//         return 0;
 
-    if (number <= 2)
-        return 1;
+//     if (number <= 2)
+//         return 1;
     
-    if (number in cache)
-        return cache[number];
+//     if (number in cache)
+//         return cache[number];
     
-    var value = fibonacci(number- 1) + fibonacci(number - 2);
+//     var value = fibonacci(number- 1) + fibonacci(number - 2);
         
-    cache[number] = value;
+//     cache[number] = value;
 
-    return value;
-}
+//     return value;
+// }
 
-    alert(fibonacci(9));
+//     alert(fibonacci(9)); //34
+
+// вариант решения с помощью цикла
+
+    function Fibonacci(n){
+        var a = 1;
+        var b = 1;
+        for (var i = 3; i <= n; i++){
+            var c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+    }
+
+    // alert(Fibonacci(9)); //34
+    alert(Fibonacci(11)); //89
+
+
+
 
     </script>
 </head>
