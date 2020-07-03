@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+    <title></title>
+
+    <script type="text/javascript">
+//     1. Объект user содержит три свойства. Свойство data содержит пять свойств, один из которых содержит массив friends. Завершите запись функции addFriend, которая принимает объект user и имя друга(friend), и добавляет имя друга(friend) в массив friends. Функция должна возвращать массив friends.
+
+var user = {
+    name: 'Kenneth',
+    age: 28,
+    data: {
+        username: 'kennethCodesAllDay',
+        joinDate: 'March 26, 2016',
+        organization: 'freeCodeCamp',
+        friends: [
+        'Sam',
+        'Kira',
+        'Tomo'
+        ],
+        location: {
+        city: 'San Francisco',
+        state: 'CA',
+        country: 'USA'
+        }
+    }
+};
+
+    function addFriend(userObj, friend) {
+        for(var a in userObj){
+                
+                var array= user.data.friends;
+                var newFriend=array.push(friend); 
+                return array;
+        }
+    }
+
+    console.log(addFriend(user, 'Pete'));
+    </script>
+
+</head>
+<body>
+</body>
+</html>

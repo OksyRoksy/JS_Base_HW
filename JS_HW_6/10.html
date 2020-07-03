@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal{
+            display: none;
+            width: 350px;
+            height: 200px;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%);
+            border: 1px solid black;
+            padding: 15px;
+            background-color: #ffff;
+        }
+    </style>
+</head>
+<body>
+    <button id='buttonModal'>Show Modal</button>
+    <div class="modal">
+        <button id='closeBtn'>X</button>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, sapiente. Nisi, mollitia. Quia eveniet amet numquam veniam maiores delectus, rem at reiciendis doloribus cupiditate corporis ratione similique voluptatum provident. Fugit! </p>
+    </div>
+    <script type="text/javascript">
+        // 10. сделать модалку без html, только с использованием js
+
+        var modal = document.querySelector('.modal');
+        var BtnShowModal = document.querySelector('#buttonModal');
+        var btnClose = document.getElementById('closeBtn');
+
+
+        BtnShowModal.addEventListener('click', function(){
+            modal.style.display = 'block';
+            document.body.style.background = 'rgba(0, 0, 0, 0.4)';
+        });
+        btnClose.addEventListener('click', function(){
+            modal.style.display = 'none';
+            document.body.style.background = '#ffff';
+        } );
+    </script>
+</body>
+</html>
